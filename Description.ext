@@ -1,0 +1,61 @@
+#include "Zen_FrameworkFunctions\Zen_LoadoutFunctions\Zen_LoadoutDialog.hpp"
+#include "aegis_ace_settings.hpp"
+
+// Classes de apoio
+class CfgNotifications {
+    #include "Zen_FrameworkFunctions\Zen_TaskSystem\Zen_TaskNotifications.hpp"
+
+    class btsInfo
+	{
+		title = "AEGIS";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		priority = 7;
+	};
+};
+
+
+
+class CfgCommunicationMenu {
+    #include "Zen_FrameworkFunctions\Zen_FireSupportSystem\Zen_FireSupportMenu.hpp"
+};
+
+class CfgMusic
+{
+	tracks[]={mission,"MKY_Blizzard","MKY_Snowfall"};
+
+	class mission
+	{
+		name = "mission";
+		sound[] = {\sounds\mission.ogg, db+2, 1.0};
+  };
+  class MKY_Blizzard
+  {
+    name = "";
+    sound[] = {"\MKY\sounds\m0nkey_blizzard.ogg", db+0, 1.0};
+  };
+  class MKY_Snowfall
+  {
+    name = "";
+    sound[] = {"\MKY\sounds\m0nkey_snowfall.ogg", db+0, 1.0};
+  };
+
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "A missão falhou";
+		subtitle = "Seu esquadrão foi eliminado.";
+		description = "O governo alega não ter conhecimento de você e de sua tropa.";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class End2
+	{
+		title = "Contrato cumprido";
+		subtitle = "CNOI está desestabilizada";
+		description = "Graças as suas ações, a CNOI entrou em contato com a Petrobras para pedir ajuda na região.";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
