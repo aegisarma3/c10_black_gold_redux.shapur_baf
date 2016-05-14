@@ -159,7 +159,9 @@ waitUntil {
 
 
 // Completa a missão
-"end2" call bis_fnc_endMission;
+[1500000,true] call aegis_mission_payment;
+sleep 3;
+"end1" call bis_fnc_endMission;
 
-Zen_MP_Closure_Packet = ["bis_fnc_endMission", "end2"];
+Zen_MP_Closure_Packet = ["bis_fnc_endMission", "end1"];
 publicVariable "Zen_MP_Closure_Packet";

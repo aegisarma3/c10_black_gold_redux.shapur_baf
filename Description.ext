@@ -46,16 +46,20 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "A missão falhou";
-		subtitle = "Seu esquadrão foi eliminado.";
-		description = "O governo alega não ter conhecimento de você e de sua tropa.";
-		pictureColor[] = {0.0,0.3,0.6,1};
-	};
-	class End2
-	{
-		title = "Contrato cumprido";
+		title = "Missão Cumprida";
 		subtitle = "CNOI está desestabilizada";
 		description = "Graças as suas ações, a CNOI entrou em contato com a Petrobras para pedir ajuda na região.";
+    pictureBackground = "";
+    picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+  class loser
+	{
+    title = "A Missão Falhou";
+    subtitle = "Todo o grupo Kaiser morreu";
+    description = "A empresa AEGIS nega qualquer conhecimento desta operação.";
+    pictureBackground = "";
+    picture = "KIA";
+    pictureColor[] = {0.6,0.1,0.2,1};
 	};
 };
