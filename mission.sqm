@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=839;
+		nextID=840;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1274.1919,59.802761,1117.0033};
-		dir[]={-0.81741023,-0.53163463,0.22204679};
-		up[]={-0.5130434,0.84696597,0.13936681};
-		aside[]={0.26215872,-3.5658013e-007,0.96507466};
+		pos[]={1422.9297,42.068211,36.009865};
+		dir[]={0.840253,-0.3613435,0.404284};
+		up[]={0.32563004,0.93242455,0.15667479};
+		aside[]={0.43358162,7.2463445e-007,-0.90114498};
 	};
 };
 binarizationWanted=0;
@@ -201,25 +201,6 @@ class CustomAttributes
 		};
 		class Attribute3
 		{
-			property="Enh_saveGearPlayers";
-			expression="      if (!is3DEN && _value && isMultiplayer) then      {         {            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            }         } remoteExec ['call',0,true];      };   ";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"BOOL"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute4
-		{
 			property="Enh_respawnTickets_independent";
 			expression="if (!is3DEN && isMultiplayer) then {[independent,_value] call BIS_fnc_respawnTickets};";
 			class Value
@@ -231,6 +212,25 @@ class CustomAttributes
 						type[]=
 						{
 							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="Enh_saveGearPlayers";
+			expression="      if (!is3DEN && _value && isMultiplayer) then      {         {            if (isNil {player getVariable 'Enh_savedLoadout'}) then            {               player setVariable ['Enh_savedLoadout',getUnitloadout player];               player addEventHandler ['respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];            }         } remoteExec ['call',0,true];      };   ";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
 						};
 					};
 					value=0;
@@ -3572,7 +3572,7 @@ class Mission
 			};
 			id=444;
 			type="Land_HBarrier_3_F";
-			atlOffset=1.1259155;
+			atlOffset=1.1259193;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24526,298 +24526,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1421.6526,40.736286,48.213375};
-						angles[]={0.027490277,0,6.270689};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						name="toaster";
-						description="Toaster";
-						isPlayer=1;
-						isPlayable=1;
-					};
-					id=669;
-					type="I_soldier_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="Enh_insignia";
-							expression="if !(_value == '') then {[_this,_value] remoteExec ['BIS_fnc_setUnitInsignia',0,true]}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="111thID";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="Enh_unitTraits_engineer";
-							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['Engineer',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['Engineer',true]};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="noChange";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_unitTrait_UAVHacker";
-							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['UAVHacker',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['UAVHacker',true]};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="noChange";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="Enh_taskPatrol_behaviour";
-							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="Enh_taskPatrol_speed";
-							expression="_this setVariable ['Enh_randomPatrol_speed',_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="normal";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="Enh_animCombEquipment";
-							expression="_this setVariable ['Enh_animCombEquipment',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="ASIS";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="Enh_animType";
-							expression="_this setVariable ['Enh_animType',_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="STAND";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="Enh_unitPos";
-							expression="_this setUnitPos _value";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="auto";
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="Enh_unitTrait_explosiveSpecialist";
-							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['ExplosiveSpecialist',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['ExplosiveSpecialist',true]};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="noChange";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="Enh_unitTraits_medic";
-							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['Medic',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['Medic',true]};			";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="noChange";
-								};
-							};
-						};
-						class Attribute12
-						{
-							property="Enh_animCombType";
-							expression="_this setVariable ['Enh_animCombType',_value]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="STAND";
-								};
-							};
-						};
-						class Attribute13
-						{
-							property="Enh_animEquipment";
-							expression="_this setVariable ['Enh_animEquipment',_value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="ASIS";
-								};
-							};
-						};
-						nAttributes=14;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1410.5909,40.288857,48.788998};
 						angles[]={6.2806892,0,0.10213667};
 					};
@@ -25104,7 +24812,7 @@ class Mission
 						nAttributes=14;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -25395,7 +25103,7 @@ class Mission
 						nAttributes=14;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -25686,7 +25394,7 @@ class Mission
 						nAttributes=14;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -25978,7 +25686,7 @@ class Mission
 						nAttributes=14;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -26269,7 +25977,7 @@ class Mission
 						nAttributes=14;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -26560,13 +26268,13 @@ class Mission
 						nAttributes=14;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1415.765,40.553474,46.630001};
-						angles[]={6.2431998,0,0.047472958};
+						position[]={1423.2889,40.3102,37.091122};
+						angles[]={6.278194,0,6.278194};
 					};
 					side="Independent";
 					flags=4;
@@ -26577,9 +26285,481 @@ class Mission
 						name="cigs";
 						description="Cigs";
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="SMA_HK416GL";
+								optics="SMA_eotech552_3XDOWN";
+								muzzle="SMA_supp2b_556";
+								flashlight="SMA_SFPEQ_HKTOP_BLK";
+								class primaryMuzzleMag
+								{
+									name="SMA_30Rnd_556x45_M855A1_IR";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="RH_p226";
+								class primaryMuzzleMag
+								{
+									name="RH_15Rnd_9x19_SIG";
+									ammoLeft=15;
+								};
+							};
+							class binocular
+							{
+								name="ACE_Yardage450";
+							};
+							class uniform
+							{
+								typeName="U_AEGIS_UNIFORM_BLK";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=12;
+									class Item0
+									{
+										name="ACE_fieldDressing";
+										count=2;
+									};
+									class Item1
+									{
+										name="ACE_morphine";
+										count=2;
+									};
+									class Item2
+									{
+										name="ACE_quikclot";
+										count=3;
+									};
+									class Item3
+									{
+										name="ACE_CableTie";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_DefusalKit";
+										count=1;
+									};
+									class Item5
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item6
+									{
+										name="ACE_Flashlight_MX991";
+										count=1;
+									};
+									class Item7
+									{
+										name="ACE_M26_Clacker";
+										count=1;
+									};
+									class Item8
+									{
+										name="ACE_microDAGR";
+										count=1;
+									};
+									class Item9
+									{
+										name="ACE_packingBandage";
+										count=3;
+									};
+									class Item10
+									{
+										name="ACRE_PRC152_ID_1";
+										count=1;
+									};
+									class Item11
+									{
+										name="ACE_tourniquet";
+										count=2;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="TRYK_V_Sheriff_BA_TB2";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="SMA_30Rnd_556x45_M855A1_IR";
+										count=6;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="HandGrenade";
+										count=3;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="SmokeShellYellow";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="ACE_M84";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="RH_15Rnd_9x19_SIG";
+										count=2;
+										ammoLeft=15;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="B_AssaultPack_blk";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="DemoCharge_Remote_Mag";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="1Rnd_HE_Grenade_shell";
+										count=7;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="1Rnd_SmokeYellow_Grenade_shell";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="UGL_FlareYellow_F";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="SatchelCharge_Remote_Mag";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadioAcreFlagged";
+							hmd="TRYK_Shemagh_G_NV";
+							headgear="H_Watchcap_blk";
+						};
 					};
 					id=783;
 					type="I_Soldier_GL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_insignia";
+							expression="if !(_value == '') then {[_this,_value] remoteExec ['BIS_fnc_setUnitInsignia',0,true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="111thID";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_unitTraits_engineer";
+							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['Engineer',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['Engineer',true]};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="noChange";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_unitTrait_UAVHacker";
+							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['UAVHacker',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['UAVHacker',true]};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="noChange";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_taskPatrol_behaviour";
+							expression="_this setVariable ['Enh_randomPatrol_behaviour',_value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_taskPatrol_speed";
+							expression="_this setVariable ['Enh_randomPatrol_speed',_value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="normal";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_animCombEquipment";
+							expression="_this setVariable ['Enh_animCombEquipment',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="ASIS";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Enh_animType";
+							expression="_this setVariable ['Enh_animType',_value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="STAND";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="Enh_unitPos";
+							expression="_this setUnitPos _value";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="auto";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_unitTrait_explosiveSpecialist";
+							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['ExplosiveSpecialist',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['ExplosiveSpecialist',true]};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="noChange";
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_unitTraits_medic";
+							expression="				if (_value isEqualTo 'noChange') then {};				if (_value isEqualTo 'no') then {_this setUnitTrait ['Medic',false]};				if (_value isEqualTo 'yes') then {_this setUnitTrait ['Medic',true]};			";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="noChange";
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_animCombType";
+							expression="_this setVariable ['Enh_animCombType',_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="STAND";
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="Enh_animEquipment";
+							expression="_this setVariable ['Enh_animEquipment',_value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="ASIS";
+								};
+							};
+						};
+						nAttributes=14;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1417.6085,40.615974,46.103874};
+						angles[]={6.2432065,0,0.044970755};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						name="feltz";
+						description="Feltz";
+						isPlayable=1;
+					};
+					id=784;
+					type="I_Soldier_M_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -26856,8 +27036,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1417.6085,40.615974,46.103874};
-						angles[]={6.2432065,0,0.044970755};
+						position[]={1424.6337,40.280651,36.328487};
+						angles[]={6.278182,0,6.2482009};
 					};
 					side="Independent";
 					flags=4;
@@ -26865,12 +27045,206 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						name="feltz";
-						description="Feltz";
+						name="toaster";
+						description="Toaster";
+						isPlayer=1;
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="SMA_MK18afgTAN_SM";
+								optics="SMA_eotech552_3XDOWN_des";
+								muzzle="SMA_supp2T_556";
+								flashlight="SMA_SFPEQ_MK18TOP_TAN";
+								class primaryMuzzleMag
+								{
+									name="SMA_30Rnd_556x45_M855A1";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="RH_fn57";
+								muzzle="RH_sfn57";
+								flashlight="RH_X300";
+								class primaryMuzzleMag
+								{
+									name="RH_20Rnd_57x28_FN";
+									ammoLeft=20;
+								};
+							};
+							class binocular
+							{
+								name="ACE_Vector";
+							};
+							class uniform
+							{
+								typeName="TRYK_shirts_DENIM_RED2_Sleeve";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="ACRE_PRC152_ID_1";
+										count=1;
+									};
+									class Item1
+									{
+										name="H_ShemagOpen_tan";
+										count=1;
+									};
+									class Item2
+									{
+										name="NVGoggles";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="lbt_medical_coy";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="SmokeShell";
+										count=5;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="Chemlight_green";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="RH_20Rnd_57x28_FN";
+										count=1;
+										ammoLeft=20;
+									};
+									class Item3
+									{
+										name="SMA_30Rnd_556x45_M855A1";
+										count=5;
+										ammoLeft=30;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="TRYK_B_Medbag";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="ACE_M84";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="SmokeShell";
+										count=10;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="MiniGrenade";
+										count=4;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=14;
+									class Item0
+									{
+										name="ACE_fieldDressing";
+										count=20;
+									};
+									class Item1
+									{
+										name="ACE_packingBandage";
+										count=20;
+									};
+									class Item2
+									{
+										name="ACE_epinephrine";
+										count=14;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=19;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=10;
+									};
+									class Item5
+									{
+										name="ACE_elasticBandage";
+										count=20;
+									};
+									class Item6
+									{
+										name="ACE_quikclot";
+										count=20;
+									};
+									class Item7
+									{
+										name="ACE_CableTie";
+										count=5;
+									};
+									class Item8
+									{
+										name="ACE_EarPlugs";
+										count=4;
+									};
+									class Item9
+									{
+										name="ACE_Flashlight_MX991";
+										count=1;
+									};
+									class Item10
+									{
+										name="ACE_microDAGR";
+										count=1;
+									};
+									class Item11
+									{
+										name="ACE_personalAidKit";
+										count=1;
+									};
+									class Item12
+									{
+										name="ACE_salineIV_500";
+										count=5;
+									};
+									class Item13
+									{
+										name="ACE_surgicalKit";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadioAcreFlagged";
+							goggles="G_Sport_Blackred";
+						};
 					};
-					id=784;
-					type="I_Soldier_M_F";
+					id=839;
+					type="I_medic_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31324,7 +31698,7 @@ class Mission
 			};
 			id=835;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.39973831;
+			atlOffset=0.39964294;
 			class CustomAttributes
 			{
 				class Attribute0
