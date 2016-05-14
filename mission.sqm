@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1421.1437,43.968472,51.589657};
-		dir[]={0.32839304,-0.35963196,-0.87353063};
-		up[]={0.12657957,0.93302518,-0.33669367};
-		aside[]={-0.93616265,-1.0908698e-006,-0.35193762};
+		pos[]={1421.5768,43.968472,42.894367};
+		dir[]={0.14150408,-0.49401033,-0.85800153};
+		up[]={0.08039768,0.86938542,-0.48746786};
+		aside[]={-0.98680574,-1.1262819e-006,-0.16274557};
 	};
 };
 binarizationWanted=0;
@@ -26507,9 +26507,9 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="sma_minimi_mk3_762tlb";
+								name="sma_minimi_mk3_762tsb_des";
 								optics="optic_Arco";
-								muzzle="sma_gemtech_one_blk";
+								muzzle="sma_gemtech_one_des";
 								class primaryMuzzleMag
 								{
 									name="SMA_150Rnd_762_Mk319_Tracer";
@@ -26531,21 +26531,22 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="U_Marshal";
+								typeName="TRYK_U_B_ARO1_CBR_R_CombatUniform";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
 									items=1;
 									class Item0
 									{
-										name="ACRE_PRC152_ID_2";
-										count=1;
+										name="30Rnd_9x21_Mag";
+										count=3;
+										ammoLeft=30;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="V_PlateCarrierGL_blk";
+								typeName="TRYK_V_ArmorVest_Brown2";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -26560,7 +26561,7 @@ class Mission
 							};
 							class backpack
 							{
-								typeName="TRYK_B_Carryall_blk";
+								typeName="TRYK_B_Carryall_JSDF";
 								isBackpack=1;
 								class MagazineCargo
 								{
@@ -26573,15 +26574,15 @@ class Mission
 									};
 									class Item1
 									{
-										name="SMA_150Rnd_762_Mk319_Tracer";
-										count=4;
-										ammoLeft=150;
-									};
-									class Item2
-									{
 										name="SmokeShellPurple";
 										count=10;
 										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="SMA_150Rnd_762_Mk319_Tracer";
+										count=4;
+										ammoLeft=150;
 									};
 								};
 								class ItemCargo
@@ -26626,7 +26627,7 @@ class Mission
 							gps="ItemGPS";
 							goggles="G_Aviator";
 							hmd="NVGoggles";
-							headgear="H_Bandanna_gry";
+							headgear="H_Bandanna_mcamo";
 						};
 					};
 					id=781;
